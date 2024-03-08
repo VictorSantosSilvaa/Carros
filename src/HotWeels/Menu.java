@@ -16,6 +16,8 @@ public class Menu {
 		System.out.println("------------------------------------");
 		System.out.println("1 - Carro.");
 		System.out.println("2 - Moto.");
+		System.out.println("3 - Ver Lista de Carro.");
+		System.out.println("4 - Ver Lista de Moto.");
 		System.out.println("9 - Sair do sistema.");
 		System.out.println("------------------------------------");
 		System.out.println("");

@@ -16,6 +16,7 @@ public class Moto extends Veiculo {
 
 	public static void moto() {
 		ArrayList<Moto> mot = new ArrayList<Moto>();
+
 		Scanner sc = new Scanner(System.in);
 		Moto moto = new Moto();
 
@@ -32,9 +33,11 @@ public class Moto extends Veiculo {
 		System.out.println("Carro Adicionado.");
 	}
 
-	public static void verMoto() {
-		Moto moto = new Moto();
+	public static void verMoto(ArrayList<Moto> mot) {
 
-		System.out.println("Moto: " + moto.getMarca());
+		for (Moto moto : mot) {
+			System.out.println("Moto: " + moto.getMarca());
+		}
 	}
+
 }

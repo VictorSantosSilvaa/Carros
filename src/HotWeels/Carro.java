@@ -47,10 +47,11 @@ public class Carro extends Veiculo {
 	}
 
 	public static void verCarro() {
+		ArrayList<Carro> car = new ArrayList<Carro>();
 
-		Carro carro = new Carro();
-
-		System.out.println("Carro: " + carro.getMarca());
+		for (Carro carro : car) {
+			System.out.println("Carro: " + carro.getMarca());
+		}
 
 	}
 
