@@ -14,28 +14,27 @@ public class Moto extends Veiculo {
 		this.possuiPartidaEletrica = possuiPartidaEletrica;
 	}
 
-	public static void moto() {
-		ArrayList<Moto> mot = new ArrayList<Moto>();
+	public static void moto(ArrayList<Moto> motos) {
 
 		Scanner sc = new Scanner(System.in);
 		Moto moto = new Moto();
 
-		System.out.println("Digite o a marca do carro: ");
+		System.out.println("Digite o a marca da moto: ");
 		moto.setMarca(sc.next());
 
-		System.out.println("Digite o ano do carro: ");
+		System.out.println("Digite o ano da moto: ");
 		moto.setAnoModelo(sc.nextInt());
 
-		System.out.println("Digite o numero de portas do carro: ");
+		System.out.println("Tem partida elétrica na moto? ");
 		moto.setPossuiPartidaEletrica(sc.nextBoolean());
-
-		mot.add(moto);
-		System.out.println("Carro Adicionado.");
+		motos.add(moto);
+		
+		System.out.println("Moto Adicionado.");
 	}
 
-	public static void verMoto(ArrayList<Moto> mot) {
+	public static void verMoto(ArrayList<Moto> motos) {
 
-		for (Moto moto : mot) {
+		for (Moto moto : motos) {
 			System.out.println("Moto: " + moto.getMarca());
 		}
 	}

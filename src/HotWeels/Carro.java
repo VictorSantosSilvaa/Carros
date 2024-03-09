@@ -24,12 +24,11 @@ public class Carro extends Veiculo {
 		this.tipocombustivel = tipocombustivel;
 	}
 
-	public static void carro() {
-		ArrayList<Carro> car = new ArrayList<Carro>();
+	public static void carro(ArrayList<Carro> carros) {
 		Scanner sc = new Scanner(System.in);
 		Carro carro = new Carro();
 
-		System.out.println("Digite o a marca do carro: ");
+		System.out.println("Digite a marca do carro: ");
 		carro.setMarca(sc.next());
 
 		System.out.println("Digite o ano do carro: ");
@@ -41,18 +40,14 @@ public class Carro extends Veiculo {
 		System.out.println("Digite o tipo de combustivel do carro: ");
 		carro.setTipocombustivel(sc.next());
 
-		car.add(carro);
+		carros.add(carro);
 		System.out.println("Carro Adicionado.");
-
 	}
 
-	public static void verCarro() {
-		ArrayList<Carro> car = new ArrayList<Carro>();
-
-		for (Carro carro : car) {
+	public static void verCarro(ArrayList<Carro> carros) {
+		for (Carro carro : carros) {
 			System.out.println("Carro: " + carro.getMarca());
 		}
-
 	}
 
 }
