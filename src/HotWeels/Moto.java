@@ -1,7 +1,7 @@
 package HotWeels;
 
-import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Moto extends Veiculo {
 	boolean possuiPartidaEletrica;
