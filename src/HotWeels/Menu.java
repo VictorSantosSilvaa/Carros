@@ -7,9 +7,9 @@ public class Menu {
 	public static void menu() {
 		ArrayList<Carro> listaCarros = new ArrayList<Carro>();
 		ArrayList<Moto> listaMotos = new ArrayList<Moto>();
+		Scanner sc = new Scanner(System.in);
 
 		do {
-			Scanner sc = new Scanner(System.in);
 
 			try {
 				System.out.println("-------------------------------");
@@ -25,16 +25,16 @@ public class Menu {
 
 				switch (opcao) {
 				case 1:
-					Carro.carro(listaCarros);
+					funcaoCarro.carro(listaCarros);
 					break;
 				case 2:
-					Moto.moto(listaMotos);
+					funcaoMoto.moto(listaMotos);
 					break;
 				case 3:
-					Carro.verCarro(listaCarros);
+					funcaoCarro.verCarro(listaCarros);
 					break;
 				case 4:
-					Moto.verMoto(listaMotos);
+					funcaoMoto.verMoto(listaMotos);
 					break;
 				case 9:
 					System.out.println("Você saiu do sistema.");
@@ -42,9 +42,11 @@ public class Menu {
 				default:
 					System.out.println("Opção inválida.");
 				}
+
 			} catch (Exception e) {
 				System.out.println("Algo deu errado.");
 			}
+
 		} while (true);
 	}
 }
