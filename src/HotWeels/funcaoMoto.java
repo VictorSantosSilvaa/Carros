@@ -27,17 +27,18 @@ public class funcaoMoto {
 		} while (moto.getAnoModelo() == 0);
 
 		do {
-			System.out.println("");
-			System.out.println("Tem partida elétrica na moto? ");
-			moto.setPossuiPartidaEletrica(sc.nextBoolean());
-		} while (moto.isPossuiPartidaEletrica() == false);
+			System.out.println("A moto possui partida elétrica? (sim/não)");
+			String respostaUsuario = sc.nextLine();
+			moto.setPossuiPartidaEletrica(respostaUsuario);
+		} while (!moto.isPossuiPartidaEletrica());
+
+		// Adicionando moto
 		motos.add(moto);
 
 		System.out.println("Moto Adicionado.");
 	}
 
 	public static void verMoto(ArrayList<Moto> motos) {
-
 		for (Moto moto : motos) {
 			System.out.println("Moto: " + moto.getMarca());
 			System.out.println("Tem elétrica? " + moto.isPossuiPartidaEletrica());

@@ -7,7 +7,14 @@ public class Moto extends Veiculo {
 		return possuiPartidaEletrica;
 	}
 
-	public void setPossuiPartidaEletrica(boolean possuiPartidaEletrica) {
-		this.possuiPartidaEletrica = possuiPartidaEletrica;
+	public void setPossuiPartidaEletrica(String respostaUsuario) {
+		if ("sim".equalsIgnoreCase(respostaUsuario)) {
+			this.possuiPartidaEletrica = true;
+		} else if ("não".equalsIgnoreCase(respostaUsuario)) {
+			this.possuiPartidaEletrica = false;
+		}else {
+			System.err.println("Tente novamente.");
+		}
+
 	}
 }
