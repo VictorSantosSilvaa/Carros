@@ -9,14 +9,28 @@ public class funcaoMoto {
 		Scanner sc = new Scanner(System.in);
 		Moto moto = new Moto();
 
-		System.out.println("Digite o a marca da moto: ");
-		moto.setMarca(sc.next());
+		do {
+			System.out.println("");
+			System.out.println("Digite o a marca da moto.");
+			System.out.println("");
+			Veiculo.verListaModelosMotos();
+			System.out.println("");
+			System.out.print("Digite: ");
+			moto.setMarca(sc.nextLine());
+		} while (moto.getMarca() == null);
 
-		System.out.println("Digite o ano da moto: ");
-		moto.setAnoModelo(sc.nextInt());
+		do {
+			System.out.println("");
+			System.out.println("Ano da moto: ");
+			System.out.println("Digite: ");
+			moto.setAnoModelo(sc.nextInt());
+		} while (moto.getAnoModelo() == 0);
 
-		System.out.println("Tem partida elétrica na moto? ");
-		moto.setPossuiPartidaEletrica(sc.nextBoolean());
+		do {
+			System.out.println("");
+			System.out.println("Tem partida elétrica na moto? ");
+			moto.setPossuiPartidaEletrica(sc.nextBoolean());
+		} while (!moto.isPossuiPartidaEletrica());
 		motos.add(moto);
 
 		System.out.println("Moto Adicionado.");
@@ -26,6 +40,7 @@ public class funcaoMoto {
 
 		for (Moto moto : motos) {
 			System.out.println("Moto: " + moto.getMarca());
+			System.out.println("Tem elétrica? " + moto.isPossuiPartidaEletrica());
 		}
 	}
 }

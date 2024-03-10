@@ -3,7 +3,6 @@ package HotWeels;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//Funções de Moto
 public class funcaoCarro {
 
 	// Funções de carro
@@ -11,17 +10,44 @@ public class funcaoCarro {
 		Scanner sc = new Scanner(System.in);
 		Carro carro = new Carro();
 
-		System.out.println("Digite a marca do carro: ");
-		carro.setMarca(sc.next());
+		do {
+			System.out.println("");
+			System.out.println("Escolha a marca do carro");
+			System.out.println("");
+			Veiculo.verListaModelosCarros();
+			System.out.println("");
+			System.out.print("Digite:");
+			System.out.println("");
+			carro.setMarca(sc.next());
+		} while (carro.getMarca() == null);
 
-		System.out.println("Digite o ano do carro: ");
-		carro.setAnoModelo(sc.nextInt());
+		do {
+			System.out.println("");
+			System.out.println("Ano do carro");
+			System.out.print("Digite:");
+			System.out.println("");
+			carro.setAnoModelo(sc.nextInt());
+		} while (carro.getAnoModelo() == 0);
 
-		System.out.println("Digite o numero de portas do carro: ");
-		carro.setNumPortas(sc.nextInt());
+		do {
+			System.out.println("");
+			System.out.println("Numero de portas do carro");
+			System.out.print("Digite:");
+			System.out.println("");
+			carro.setNumPortas(sc.nextInt());
+		} while (carro.getNumPortas() == 0);
 
-		System.out.println("Digite o tipo de combustivel do carro: ");
-		carro.setTipocombustivel(sc.next());
+		do {
+			System.out.println("");
+			System.out.println("Tipo de combustivel do carro: ");
+			System.out.println("");
+			System.out.println("Gasolina");
+			System.out.println("Diesel");
+			System.out.println("");
+			System.out.print("Digite: ");
+			System.out.println("");
+			carro.setTipocombustivel(sc.next());
+		} while (carro.getTipocombustivel() == null);
 
 		carros.add(carro);
 		System.out.println("Carro Adicionado.");

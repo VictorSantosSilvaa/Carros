@@ -24,21 +24,26 @@ public class Menu {
 				int opcao = sc.nextInt();
 
 				switch (opcao) {
-				case 1:
+				case 1: {
 					funcaoCarro.carro(listaCarros);
 					break;
-				case 2:
+				}
+				case 2: {
 					funcaoMoto.moto(listaMotos);
 					break;
-				case 3:
+				}
+				case 3: {
 					funcaoCarro.verCarro(listaCarros);
 					break;
-				case 4:
+				}
+				case 4: {
 					funcaoMoto.verMoto(listaMotos);
 					break;
-				case 9:
+				}
+				case 9: {
 					System.out.println("Você saiu do sistema.");
 					return;
+				}
 				default:
 					System.out.println("Opção inválida.");
 				}
