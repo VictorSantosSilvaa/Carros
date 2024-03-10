@@ -51,7 +51,7 @@ public class Veiculo {
 
 	public void setAnoModelo(int anoModelo) {
 
-		if (anoModelo >= 2020) {
+		if (anoModelo >= 2000 && anoModelo <=2025) {
 			this.anoModelo = anoModelo;
 		} else {
 			System.err.println("Ano inválido... Digite novamente.");
