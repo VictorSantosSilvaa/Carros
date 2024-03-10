@@ -30,7 +30,7 @@ public class funcaoMoto {
 			System.out.println("");
 			System.out.println("Tem partida elétrica na moto? ");
 			moto.setPossuiPartidaEletrica(sc.nextBoolean());
-		} while (moto.isPossuiPartidaEletrica());
+		} while (moto.isPossuiPartidaEletrica() == false);
 		motos.add(moto);
 
 		System.out.println("Moto Adicionado.");

@@ -18,7 +18,7 @@ public class funcaoCarro {
 			System.out.println("");
 			System.out.print("Digite:");
 			System.out.println("");
-			carro.setMarca(sc.next());
+			carro.setMarca(sc.nextLine());
 		} while (carro.getMarca() == null);
 
 		do {

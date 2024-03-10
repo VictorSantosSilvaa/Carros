@@ -10,5 +10,4 @@ public class Moto extends Veiculo {
 	public void setPossuiPartidaEletrica(boolean possuiPartidaEletrica) {
 		this.possuiPartidaEletrica = possuiPartidaEletrica;
 	}
-
 }
